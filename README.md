@@ -6,11 +6,11 @@ This repository is the implementation of our study 'Heuristics Discovery Using L
 Please note that **the Python version must be larger or equal to Python 3.9**, or the '*ast*' package used in the implementations will not work. The required environment can be reproduced by referring to 'requirements.txt'.
 
 ## Heuristics Discovery
-The pipeline composes of two parts: an LLM agent and the evolutionary algorithm. The LLM server should be loaded first from huggingface by running llm-server/llm_server.py (you can also use an API, refer to https://github.com/RayZhhh/funsearch for implementation) Mixtral-8x7B-Instruct-v0.1 is used in this repo but you can load any LLM of your choice. And then the main file is run to initiate the pipeline. There are 3 main files:
-	-main_edd.py
-	-main_spt.py
-	-main_mdd.py
-They take different specifications and all of them are available under 'specification' folder. Data used to train the functions is specified within the main files and they are stored in 'data' file. The logs are recorded to logs file, along with number of samples, all of the mentioned things can be manipulated within main file.  First the llm_server.py should be run and then one of the main files of your choice. It is crucial to make calls from (from main file) to the same port that the LLM is loaded. 
+The pipeline composes of two parts: an LLM agent and the evolutionary algorithm. The LLM server should be loaded first from huggingface by running llm-server/llm_server.py (you can also use an API, refer to https://github.com/RayZhhh/funsearch for implementation), Mixtral-8x7B-Instruct-v0.1 is used in this repo but you can load any LLM of your choice. And then the main file is run to make calls to the LLM and hence inititate the pipeline. There are 3 main files:
+	-`main_edd.py`
+	-`main_spt.py`
+	-`main_mdd.py`
+They take different specifications and all of them are available under 'specification' folder. The data used to train the functions is specified within the main files and they are stored in 'data' file. The logs are recorded to logs file, along with number of samples, all of the mentioned things can be manipulated within main file.  First the llm_server.py should be run and then one of the main files of your choice. It is crucial to make calls from (from main file) to the same port that the LLM is loaded. 
 
 There are some independent directories in this project:
 
