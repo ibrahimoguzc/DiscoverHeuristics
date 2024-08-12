@@ -1,3 +1,4 @@
+# DiscoverHeuristics
 This repository is the implementation our study 'Heuristics Discovery Using Large Language Models'. The repository is composed of two main parts: heuristics discovery pipeline ("heuristics_discovery") which includes the code for the heuristic discovery pipeline and "testing" which includes the code for testing the discovered algorithms and also exact solution methods.
 
 ## Installation and Requirements
