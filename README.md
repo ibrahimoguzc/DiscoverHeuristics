@@ -3,10 +3,10 @@ This repository is the implementation our study 'Heuristics Discovery Using Larg
 
 ## Installation and Requirements
 
-Please note that **the Python version must be larger or equal to Python 3.9**, or the '*ast*' package used in the implementations will not work. 
+Please note that **the Python version must be larger or equal to Python 3.9**, or the '*ast*' package used in the implementations will not work. The required environment can be reproduced by referring to 'requirements.txt'.
 
 ## Heuristics Discovery
-The pipeline composes of two parts: an LLM agent and the evolutionary algorithm. The LLM server should be loaded first from huggingface by running llm-server/llm_server.py (you can also use an API, refer to https://github.com/RayZhhh/funsearch for implementation) Mixtral-8x7B-Instruct-v0.1 is used in this repo but you can load any LLM of your choice. And then the main file is run to initiate the pipeline. The requirements for this project can be found in 'requirements.txt'. There are 3 main files:
+The pipeline composes of two parts: an LLM agent and the evolutionary algorithm. The LLM server should be loaded first from huggingface by running llm-server/llm_server.py (you can also use an API, refer to https://github.com/RayZhhh/funsearch for implementation) Mixtral-8x7B-Instruct-v0.1 is used in this repo but you can load any LLM of your choice. And then the main file is run to initiate the pipeline. There are 3 main files:
 	-main_edd.py
 	-main_spt.py
 	-main_mdd.py
