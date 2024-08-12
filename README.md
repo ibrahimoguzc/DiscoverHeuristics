@@ -1,5 +1,5 @@
 # DiscoverHeuristics
-This repository is the implementation our study 'Heuristics Discovery Using Large Language Models'. The repository is composed of two main parts: heuristics discovery pipeline ("heuristics_discovery") which includes the code for the heuristic discovery pipeline and "testing" which includes the code for testing the discovered algorithms and also exact solution methods.
+This repository is the implementation of our study 'Heuristics Discovery Using Large Language Models'. The repository is composed of two main parts: "heuristics_discovery" which includes the code for the heuristic discovery pipeline and "testing" which includes the code for testing the discovered algorithms and also exact solution methods.
 
 ## Installation and Requirements
 
@@ -12,8 +12,6 @@ The pipeline composes of two parts: an LLM agent and the evolutionary algorithm.
 	-main_mdd.py
 They take different specifications and all of them are available under 'specification' folder. Data used to train the functions is specified within the main files and they are stored in 'data' file. The logs are recorded to logs file, along with number of samples, all of the mentioned things can be manipulated within main file.  First the llm_server.py should be run and then one of the main files of your choice. It is crucial to make calls from (from main file) to the same port that the LLM is loaded. 
 
-Project Structure
-
 There are some independent directories in this project:
 
 - `implementation` contains an implementation of the evolutionary algorithm, code manipulation routines, and a single-threaded implementation of the heuristics discovery pipeline. 
@@ -21,9 +19,7 @@ There are some independent directories in this project:
 - `data` contains the data that is used to train the functions
 - `specification` contains different specifications to inititate the pipeline 
 
-Files in `funsearch/implementation`
-
-There are some files in `funsearch/implementation`. They are as follows:
+There are some files in `DiscoverHeuristics/heuristics_discovery/implementation`. They are as follows:
 
 - `code_manipulation.py` provides functions to modify the code in the specification.
 - `config.py` includes configs of the pipeline.
@@ -47,4 +43,4 @@ python main_mdd.py
 ## Testing
 
 The exact solutions for N=20 instances are generated using DP mainly, also MIP and MIP with VI approaches are used to compare. Relevant code is in the notebook 'exact_solutions.ipynb'.
-The N = 100, 200 and 500 instances are taken from Shang et al (2017), refer to (https://github.com/vtkindt/1-dj-Sum-Tj) for their TTBM algorithm's code and data. Thanks to Dr. Vincent T'Kindt for sharing the material. The "heuristics_comparison.ipynb" is used to compare heuristics and optimal solutions.
+The N = 100, 200 and 500 instances are taken from Shang et al (2017), refer to (https://github.com/vtkindt/1-dj-Sum-Tj) for their TTBM algorithm's code and data. Thanks to Dr. Vincent T'Kindt for sharing the material. The "heuristics_comparison.ipynb" is used to compare state-of-the art heuristics (EDD, MDD, PSK and Pannerselvam), the discovered heuristics (EDDC and MDDC) and the optimal solutions.
